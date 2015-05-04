@@ -1,0 +1,18 @@
+ #only betrays if they were a sucker last round.
+    elif player == 2:
+        if getting_team_name:
+            return 'loyal vengeful'
+            return 'Tu Madre- Esme Lopez, Ulonie Garza'
+        else:
+            if len(opponent_history)==0: #It's the first round: collude
+                return 'c'
+            elif history[-1]=='c' and opponent_history[-1]=='b':
+                return 'b'
+            elif history[-1]=='b' and opponent_history[-1]=='b':
+                return 'b' # betray if they were severely punished last time
+            else:
+                return 'c' #otherwise collude
+
+            if len(opponent_history)==1:
+                return 'c'
+
